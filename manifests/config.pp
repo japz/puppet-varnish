@@ -23,6 +23,9 @@ class varnish::config {
         '4.0': {
           $sysconfig_template = 'varnish/debian/varnish-4.default.erb'
         }
+        '4.1': {
+          $sysconfig_template = 'varnish/debian/varnish-4.1.default.erb'
+        }
         default: {
           fail("Varnish version ${::varnish::varnish_version} not supported on ${::operatingsystem} (${::lsbdistdescription}, ${::lsbdistcodename})")
         }
